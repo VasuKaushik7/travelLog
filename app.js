@@ -29,7 +29,13 @@ const Log = new mongoose.model("Log", logsSchema);
 //     if(err){
 //         console.log("error----->",err);
 //     }
-// })
+// })'
+app.get("/", (request, response) => {
+    const status = {
+        "Status": "Running"
+    };
+    response.send(status);
+})
 app.get("/status", (request, response) => {
     const status = {
         "Status": "Running"
