@@ -65,7 +65,7 @@ app.post("/logs", function (req, res) {
     newLog.save()
         .then(
             function () {
-                res.send("Log added successfully");
+                res.send(JSON.stringify("Added Successfully"));
             }
         )
         .catch(
@@ -79,7 +79,7 @@ app.delete("/logs", function (req, res) {
     Log.findByIdAndRemove(logId)
         .then(
             function () {
-                res.send("log Deleted Successfully")
+                res.send(JSON.stringify("Deleted Successfully"))
             }
         )
         .catch(
