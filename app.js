@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 app.use(express.json());
-mongoose.connect('mongodb://localhost:27017/logsDB');
+mongoose.connect('mongodb+srv://vasu:247333@cluster0.n8lxb2n.mongodb.net/?retryWrites=true&w=majority');
 const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
